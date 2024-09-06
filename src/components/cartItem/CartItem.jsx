@@ -24,10 +24,6 @@ const CartItem = ({ producto }) => {
         </div>
       </div>
     </>
-
-    
-
-    
   );
 };
 

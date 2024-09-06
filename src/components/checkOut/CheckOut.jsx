@@ -58,7 +58,15 @@ const Checkout = () => {
         </div>
         <div>
           <label className="block mb-1">Número de Tarjeta:</label>
-          <input type="text" name="tarjeta" value={form.tarjeta} onChange={handleChange} required className="w-full p-2 border border-gray-300 rounded" />
+          <input type="number" name="tarjeta" value={form.tarjeta} onChange={handleChange} required className="w-full p-2 border border-gray-300 rounded" />
+        </div>
+        <div>
+          <label className="block mb-1">Validez:</label>
+          <input type="text" name="validez" value={form.validezTarjeta} onChange={handleChange} required className="w-full p-2 border border-gray-300 rounded" />
+        </div>
+        <div>
+          <label className="block mb-1">CVC:</label>
+          <input type="number" name="cvc" value={form.cvcTarjeta} onChange={handleChange} required className="w-full p-2 border border-gray-300 rounded" />
         </div>
         <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Confirmar Compra
