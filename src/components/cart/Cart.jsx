@@ -5,7 +5,7 @@ import { Button } from '../button/Button';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  const { cart, clean } = useContext(CartContext);
+  const { cart, clean, getTotal } = useContext(CartContext);
 
   return (
     <div>
@@ -21,7 +21,14 @@ const Cart = () => {
             <Button clase="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2" texto="Finalizar Compra" disabled={false} />
           </Link>
         )}
+        {cart.length > 0 && (
+        <div className="ml-auto font-bold text-lg mt-2">
+          Total: USD {getTotal().toFixed(2)}
+        </div>
+      )}
       </div>
+
+      
     </div>
   );
 };
