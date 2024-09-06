@@ -21,6 +21,7 @@ function App() {
               <Route path="/producto/:productoId" element={<ItemDetailContainer/>}/>
               <Route path="/Cart" element ={<Cart/>}/>
               <Route path="/Checkout" element={<Checkout />} />
+              <Route path='*' element={<h1>Atencion! vuelva al Inicio para seguir comprando!</h1>}/>
             </Routes>
           </main>
         </BrowserRouter>
